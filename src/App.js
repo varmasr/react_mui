@@ -24,7 +24,7 @@ function App() {
     
     <div className="App">
     <Typography className={classes.helloThereStyles} variant='h1' color="secondary"> Hello There </Typography>
-      <Button color="primary" variant='outlined'> This is from material</Button>
+      <Button className={classes.buttonStyles} color="primary" variant='contained'> This is from material</Button>
     </div>
     </ThemeProvider>
   );
