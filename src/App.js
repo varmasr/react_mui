@@ -1,12 +1,31 @@
 import React from 'react';
-import CoolButton from './CoolButton';
+import Button from '@material-ui/core/Button'
+import { makeStyles } from '@material-ui/styles';
 
+const useStyles = makeStyles(theme => ({
+  root : {
+    color : "red",
+    border : "none"
+  }
+}));
 
 function App() {
-  const cool = false;
+  const classes = useStyles();
   return (
     <>
-    <CoolButton cool={cool}/>
+{/*     <Button className={classes.root} variant="outlined" size="small" color="primary">
+      small button
+    </Button> */}
+     <Button
+      classes={{
+        root: classes.root
+     }} 
+     variant="outlined"
+     size="small"
+     color="primary">
+      small button
+    </Button>
+    
     </>
   );
 }
